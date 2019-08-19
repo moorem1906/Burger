@@ -1,17 +1,17 @@
-<div class="container">
+    <div class="container">
 
     <div class="jumbotron">
-        <h1>Order Your Burger </h1>
-        <p>Burger Orders for Pickup.</p>
+        <h1>Welcome to Gud'Burger </h1>
+        <p>Welcome to Gud'Burger...Home of the Gud'Burger, can I take your order .</p>
         <br>
-        <h2>Select a Burger</h2>
+        <h2>Select a Gud'Burger</h2>
         <panel>
             <form class="create-form">
                 <div class="form-group">
                     <label for="newburger">Order Fresh Burger</label>
                     <select data-placeholder="" id="newburger" name="burger">
-                        <option value="Hamburger">Hamburger</option>
-                        <option value="CheeseBurger">CheeseBurger</option>
+                        <option value="Hamburger">Gub'Hamburger</option>
+                        <option value="CheeseBurger">Gub'CheeseBurger</option>
                         <option value="DoubleBfChz">Double Up (double meat and cheese)</option>
                         <option value="VeggieBurger">Veggie Burger</option>
                     </select>
@@ -26,13 +26,13 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="panel panel-default">
-                <div class="panel-heading" id="leftside"><strong>Order Your Burger</strong>
+                <div class="panel-heading" id="leftside"><strong>Order Your Gud'Burger</strong>
                     <p>Send order to cashier when ready for pick up</p>
                 </div>
                 <div class="panel-body">
 
                     <ul>
-                        {{#each burgers}}
+                        {{#each burger}}
                         {{#unless devoured}}
 
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
@@ -48,12 +48,12 @@
         </div>
         <div class="col-sm-6">
             <div class="panel panel-default">
-                <div class="panel-heading" id="rightside"><strong>Burger is Ready for Pick Up</strong>
+                <div class="panel-heading" id="rightside"><strong>Gub'Burger is Ready for Pick Up</strong>
                     <p>Remove order from pick up when delivered</p>
                 </div>
                 <div class="panel-body">
                     <ul>
-                        {{#each burgers}}
+                        {{#each burger}}
                         {{#if devoured}}
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
                         <button type="button" class="trashburger btn btn-danger" id="trashbutton" data-id="{{this.id}}"

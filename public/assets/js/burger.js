@@ -8,7 +8,7 @@ $(function(){
         burger_name: $("#newburger").val().trim(), devoured: 0
     };
 
-    $.ajax("/api/burger", {
+    $.ajax("/api/Burger", {
         type: "POST",
         data: newBurger
     }).then(function () {
@@ -27,10 +27,9 @@ $(function(){
 
             //PUT request .then reload the page
         };
-        $.ajax("api/burger" + id, {
+        $.ajax("api/Burger" + id, {
             type: "PUT",
             data:  devouredState,
-    
         }).then(function(){
             console.log("Burger devoured");
             location.reload();
@@ -44,7 +43,7 @@ $(function(){
 
         $.ajax({
             type:"DELETE",
-            url: "api/burger" + id 
+            url: "api/Burger" + id 
 
         }).then(location.reload());
     });
